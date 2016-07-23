@@ -62,7 +62,7 @@ namespace PokemonGo.RocketAPI.Logic
             {
                 try
                 {
-                    ConsoleLevelTitle("VWPole", _client);
+                    ConsoleLevelTitle("Trainer", _client);
                     await EvolveAllPokemonWithEnoughCandy();
                     await TransferDuplicatePokemon();
                     await RecycleItems();
