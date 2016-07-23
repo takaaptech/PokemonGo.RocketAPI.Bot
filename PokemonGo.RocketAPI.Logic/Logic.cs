@@ -282,7 +282,7 @@ namespace PokemonGo.RocketAPI.Logic
                     System.Console.Title = string.Format(Username + " | Level: {0:0} - ({1:0} / {2:0}) | Stardust: {3:0}", v.Level, (v.Experience - v.PrevLevelXp - XpDiff), (v.NextLevelXp - v.PrevLevelXp - XpDiff), profile.Profile.Currency.ToArray()[1].Amount) + " | XP/Hour: " + Math.Round(TotalExperience / GetRuntime()) + " | Pokemon/Hour: " + Math.Round(TotalPokemon / GetRuntime());
                 }
             await Task.Delay(1000);
-            await ConsoleLevelTitle(Username, _client);
+            ConsoleLevelTitle(Username, _client);
         }
         public static double GetRuntime()
         {
